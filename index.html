@@ -28,11 +28,17 @@
           <li class="link"><a href="#gallery">gallery</a></li>
           <li class="sign">
             <a
-              href="file:///C:/Users/Beksultan/Desktop/Movie/javascript-auth/index.html"
+              href="file:///C:/Users/Beksultan/Desktop/Movie/Login-Register/index.html"
               style="color: white"
               >sign in</a
             >
           </li>
+          <button id="darkModeBtn" img src="/dark theme icon/moon.png" alt="">
+            Dark
+          </button>
+          <button id="lightModeBtn" img src="/dark theme icon/sun.png" alt="">
+            Light
+          </button>
         </ul>
 
         <label for="bars" class="icon-bars"
@@ -51,6 +57,7 @@
         <button class="btn-explore">
           Explore more <i class="ri-arrow-right-line"></i>
         </button>
+        <img src="" alt="" />
       </div>
     </header>
 
@@ -112,11 +119,8 @@
             </div>
             <div class="content-card">
               <h4>Rome</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
-                blanditiis odit culpa?
-              </p>
-              <button class="btn-read">read More</button>
+
+              <button class="btn-read" onclick="showInfo(1)">read More</button>
             </div>
           </div>
 
@@ -126,11 +130,8 @@
             </div>
             <div class="content-card">
               <h4>London</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
-                blanditiis odit culpa?
-              </p>
-              <button class="btn-read">read More</button>
+
+              <button class="btn-read" onclick="showInfo(2)">read More</button>
             </div>
           </div>
 
@@ -140,13 +141,30 @@
             </div>
             <div class="content-card">
               <h4>Tokio</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
-                blanditiis odit culpa?
-              </p>
-              <button class="btn-read">read More</button>
+
+              <button class="btn-read" onclick="showInfo(3)">read More</button>
             </div>
           </div>
+        </div>
+      </div>
+      <div style="margin: 0 auto">
+        <div class="p_text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="p_text">
+          <p>
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor.
+          </p>
+        </div>
+        <div class="p_text">
+          <p>
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor.
+          </p>
         </div>
       </div>
     </section>
@@ -305,16 +323,22 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nulla
           soluta.
         </p>
-        <ul class="navigation">
-          <li class="link"><a href="#home">home</a></li>
-          <li class="link"><a href="#about">about us</a></li>
-          <li class="link"><a href="#next">next</a></li>
-          <li class="link"><a href="#blog">blog</a></li>
-          <li class="link"><a href="#gallery">gallery</a></li>
-          <li class="link"><a href="#contact">contact</a></li>
-        </ul>
       </div>
     </footer>
     <script src="main.js"></script>
+    <script>
+      let ptexts = document.querySelectorAll(".p_text");
+
+      function showInfo(n) {
+        ptexts.forEach((ptext, index) => {
+          if (index === n - 1) {
+            ptext.style.display = "block";
+          } else {
+            ptext.style.display = "none";
+          }
+        });
+      }
+      showInfo(1);
+    </script>
   </body>
 </html>
